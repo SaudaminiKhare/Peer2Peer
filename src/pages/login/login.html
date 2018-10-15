@@ -15,33 +15,32 @@
 
 </ion-header>
 
-<ion-content>
+<ion-content padding>
+    <form>
+        <ion-list>
+    <!--
+          <ion-item>
+            <ion-label fixed>{{ 'EMAIL' | translate }}</ion-label>
+            <ion-input type="email" [(ngModel)]="account.email" name="email"></ion-input>
+          </ion-item>
+        -->
 
-    <ion-row class="login-form">
-        <ion-col>
-            <ion-list inset>
 
-              <ion-item>
-                <ion-label><ion-icon name="person"></ion-icon></ion-label>
-                <ion-input [(ngModel)]="email" placeholder="email" type="text"></ion-input>
-              </ion-item>
+          <ion-item>
+            <ion-input type="text" name="username" placeholder="Username"></ion-input>
+          </ion-item>
 
-              <ion-item>
-                <ion-label><ion-icon name="lock"></ion-icon></ion-label>
-                <ion-input [(ngModel)]="password" placeholder="password" type="password"></ion-input>
-              </ion-item>
 
-            </ion-list>
+          <ion-item>
+            <ion-input type="password" name="password" placeholder="Password"></ion-input>
+          </ion-item>
 
-            <button ion-button full (click)="login()" color="primary" class="login-button">Login</button>
+          <div padding>
+            <button ion-button color="primary" block (click)="doLogin()">LOGIN_BUTTON</button>
+          </div>
 
-        </ion-col>
-    </ion-row>
+        </ion-list>
+      </form>
 
-    <ion-row>
-        <ion-col>
-            <button ion-button (click)="launchSignup()" class="create-account">Create an Account</button>
-        </ion-col>
-    </ion-row>
 
 </ion-content>
