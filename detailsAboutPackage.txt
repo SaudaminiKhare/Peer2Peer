@@ -1,0 +1,43 @@
+Pages and contents :
+
+->/src/index.html
+	src/index.html is the main entry point for the app, though its purpose is to set up scripts, CSS includes, and bootstrap, or start running our app. We won’t spend much of our time in this file.
+->root component : app.component.ts : empty shell for other components to be loaded into
+			->declarations : list of all the pages
+-> in app.component.ts we set the root component of the module
+
+-> in app.html we define the side menu common for all the pages
+this is done through <ion-menu>
+
+-> ion nav acts at the main component of the page
+	here we set the root to be the rootPage which we have defined in app.component.ts to be the HelloIonic Page
+
+-> Each page has three files
+	1.the ts file which renders the Angular component
+	2.the html file which acts as the template based on which the page is constructed
+		this is set as the template in the .ts file
+	3.the css file
+	
+	while we access each file in the ts we do a few things: 
+		1. we set the component details : a component controls a patch of the screen called the view
+			the component's logic is defined via a class.
+		2. we use the @component decorator to convert a class to a component
+			this is used to specify the metadata of the component
+			these are basically the building blocks of the component
+			they are : 
+				1. selector : this basically tells angular to insert an instance of this component wherever the tag is encountered.
+				2. templateURL : HTML template for the component
+					this is used to define the component's view
+
+	the template file : .html file 
+		1.looks like a regular html syntax but also contains the angular template syntax
+		 alters the view based on the state and the DOM data
+		 can be used to bind to data in the ts file
+
+-> Data Binding
+	-> angular can be used for two way data binding between the component and the template
+	-> three types of bindings : 
+		1. interpolation : {{obj.value}} : binds the value of the value where the value is the name of the attribute and the obj is the 
+			corresponding object name
+		2. Property binding
+		3.method binding for events
