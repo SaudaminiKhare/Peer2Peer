@@ -7,10 +7,12 @@ import { SignupPage } from './signup';
 @NgModule({
   declarations: [
     SignupPage,
+    // MaterializeDirective
   ],
   imports: [
     IonicPageModule.forChild(SignupPage),
-    TranslateModule.forChild()
+    TranslateModule.forChild(),
+    // MaterializeModule
   ],
   exports: [
     SignupPage
